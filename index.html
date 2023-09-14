@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Product Manager Pro</title>
+  </head>
+  <body>
+    <div class="crud">
+      <div class="inputs">
+        <h3 class="inputs-head">Create/Update Product</h3>
+        <label for="title">Title:</label>
+        <input type="text" id="title" placeholder="title" />
+        <div class="price">
+          <label for="price">Price:</label>
+          <input type="number" id="price" placeholder="price" />
+          <label for="taxes">Taxes:</label>
+          <input type="number" id="taxes" placeholder="taxes" />
+          <label for="ads">Ads:</label>
+          <input type="number" id="ads" placeholder="ads" />
+          <label for="discount">Discount:</label>
+          <input type="number" id="discount" placeholder="discount" />
+          <label for="total">Total:</label>
+          <small id="total"></small>
+        </div>
+        <label for="count">Count:</label>
+        <input type="number" id="count" placeholder="count" />
+        <label for="category">Category:</label>
+        <input type="text" id="category" placeholder="category" />
+        <button id="submit">Create</button>
+      </div>
+
+      <div class="outputs">
+        <div class="head">
+          <h2>Lmilan</h2>
+          <p>product management system</p>
+        </div>
+
+        <div class="searchBlock">
+          <input
+            onkeyup="searchProducts(this.value)"
+            type="text"
+            id="search"
+            placeholder="Search"
+          />
+          <div class="btnSearch">
+            <button onclick="getSearchMood(this.id)" id="searchTitle">
+              Search By Title
+            </button>
+            <button onclick="getSearchMood(this.id)" id="searchCategory">
+              Search By Category
+            </button>
+          </div>
+        </div>
+        <div style="border-radius: 4px" id="deleteAll"></div>
+        <div class="table">
+          <table>
+            <tr>
+              <th>id</th>
+              <th>title</th>
+              <th>price</th>
+              <th>taxes</th>
+              <th>ads</th>
+              <th>discount</th>
+              <th>category</th>
+              <th>Total</th>
+              <th>updates</th>
+              <th>delete</th>
+            </tr>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
